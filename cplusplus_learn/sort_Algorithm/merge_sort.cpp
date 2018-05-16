@@ -11,10 +11,9 @@ void merge(int *arr, int start, int middle, int end);
 void merge_sort(int *arr, int start, int end);
 
 int main() {
-	int a[SIZE] = { 42, 3, 12, 25, 9, 21, 17, 8, 23};
-	bucket_sort(a, SIZE);
+	int a[SIZE] = { 42, 3, 12, 25, 9, 21, 17, 8, 23 };
+	merge_sort(a, 0 ,SIZE);
 	Show(a, SIZE);
-	std::cin.get();
 	return 0;
 }
 
@@ -27,9 +26,9 @@ void merge(int *arr, int start, int middle, int end) {
 		else
 			temp[k++] = arr[j++];
 	}
-	while(j < end)
+	while (j < end)
 		temp[k++] = arr[j++];
-	while(i < middle)
+	while (i < middle)
 		temp[k++] = arr[i++];
 	for (int p = start; p < end; p++)
 		arr[p] = temp[p - start];
@@ -45,7 +44,7 @@ void merge_sort(int *arr, int start, int end) {
 	merge(arr, start, middle, end);
 }
 
-void Show(int *arr, int len){
+void Show(int *arr, int len) {
 	for (int i = 0; i< len; i++)
 		cout << arr[i] << " ";
 	cout << endl;

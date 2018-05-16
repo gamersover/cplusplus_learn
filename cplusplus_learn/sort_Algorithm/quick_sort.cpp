@@ -11,10 +11,9 @@ int partition(int *arr, int start, int end);
 void quick_sort(int *arr, int start, int end);
 
 int main() {
-	int a[SIZE] = { 42, 3, 12, 25, 9, 21, 17, 8, 23};
-	bucket_sort(a, SIZE);
+	int a[SIZE] = { 42, 3, 12, 25, 9, 21, 17, 8, 23 };
+	quick_sort(a, 0, SIZE);
 	Show(a, SIZE);
-	std::cin.get();
 	return 0;
 }
 
@@ -42,7 +41,7 @@ void quick_sort(int *arr, int start, int end) {
 	quick_sort(arr, pivot + 1, end);
 }
 
-void Show(int *arr, int len){
+void Show(int *arr, int len) {
 	for (int i = 0; i< len; i++)
 		cout << arr[i] << " ";
 	cout << endl;

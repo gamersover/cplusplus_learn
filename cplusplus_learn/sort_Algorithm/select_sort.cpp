@@ -10,10 +10,9 @@ void Swap(int *arr, int i, int j);
 void select_sort(int *arr, int len);
 
 int main() {
-	int a[SIZE] = { 42, 3, 12, 25, 9, 21, 17, 8, 23};
-	bucket_sort(a, SIZE);
+	int a[SIZE] = { 42, 3, 12, 25, 9, 21, 17, 8, 23 };
+	select_sort(a, SIZE);
 	Show(a, SIZE);
-	std::cin.get();
 	return 0;
 }
 
@@ -28,7 +27,7 @@ void select_sort(int *arr, int len) {
 	}
 }
 
-void Show(int *arr, int len){
+void Show(int *arr, int len) {
 	for (int i = 0; i< len; i++)
 		cout << arr[i] << " ";
 	cout << endl;

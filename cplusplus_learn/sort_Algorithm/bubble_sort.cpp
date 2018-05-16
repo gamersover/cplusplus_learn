@@ -11,9 +11,8 @@ void bubble_sort(int *arr, int len);
 
 int main() {
 	int a[SIZE] = { 42, 3, 12, 25, 9, 21, 17, 8, 23};
-	bucket_sort(a, SIZE);
+	bubble_sort(a, SIZE);
 	Show(a, SIZE);
-	std::cin.get();
 	return 0;
 }
 

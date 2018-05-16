@@ -7,8 +7,6 @@ using std::cout;
 using std::endl;
 void Show(int *arr, int len);
 void Swap(int *arr, int i, int j);
-Node* insert(Node *head, int v);
-void bucket_sort(int *arr, int len, int buckets);
 
 struct Node {
 	Node() {
@@ -19,11 +17,13 @@ struct Node {
 	Node *next;
 };
 
+Node* insert(Node *head, int v);
+void bucket_sort(int *arr, int len, int buckets);
+
 int main() {
-	int a[SIZE] = { 42, 3, 12, 25, 9, 21, 17, 8, 23};
-	bucket_sort(a, SIZE);
+	int a[SIZE] = { 42, 3, 12, 25, 9, 21, 17, 8, 23 };
+	bucket_sort(a, SIZE, 5);
 	Show(a, SIZE);
-	std::cin.get();
 	return 0;
 }
 
@@ -67,7 +67,7 @@ void bucket_sort(int *arr, int len, int buckets) {
 	}
 }
 
-void Show(int *arr, int len){
+void Show(int *arr, int len) {
 	for (int i = 0; i< len; i++)
 		cout << arr[i] << " ";
 	cout << endl;
